@@ -86,10 +86,10 @@ Statistical tests include:
 
 Significance thresholds:
 
-* * p < 0.05
-* ** p < 0.01
-* *** p < 0.005
-* **** p < 0.001
+* (*) p < 0.05
+* (**) p < 0.01
+* (***) p < 0.005
+* (****) p < 0.001
 
 ---
 
