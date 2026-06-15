@@ -1,0 +1,4 @@
+"age",".y.","group1","group2","n1","n2","statistic","df","p"
+"Young","int_density","Green","Red",10,10,6.98022188100167,9,6.46e-05
+"Middle","int_density","Green","Red",18,18,8.84541810895685,17,9.06e-08
+"Old","int_density","Green","Red",18,18,10.484605717753,17,7.7e-09

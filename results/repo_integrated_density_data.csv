@@ -1,0 +1,93 @@
+"sample_id","age","age_num","channel","x_pos","int_density"
+"Repo1_15to20 Mito F 251031 3 channels-Airyscan Processing-13_Repo_Middle_Left","Middle",2,"Green",1.82,54160000
+"Repo1_15to20 Mito F 251031 3 channels-Airyscan Processing-13_Repo_Middle_Left","Middle",2,"Red",2.18,10600000
+"Repo1_15to20 Mito F 251031 3 channels-Airyscan Processing-13_Repo_Middle_Right","Middle",2,"Green",1.82,76210000
+"Repo1_15to20 Mito F 251031 3 channels-Airyscan Processing-13_Repo_Middle_Right","Middle",2,"Red",2.18,17300000
+"Repo1_49to50d F 111125-Airyscan Processing-11_Repo_Old_Left","Old",3,"Green",2.82,42380000
+"Repo1_49to50d F 111125-Airyscan Processing-11_Repo_Old_Left","Old",3,"Red",3.18,7437000
+"Repo1_49to50d F 111125-Airyscan Processing-11_Repo_Old_Right","Old",3,"Green",2.82,61760000
+"Repo1_49to50d F 111125-Airyscan Processing-11_Repo_Old_Right","Old",3,"Red",3.18,9705000
+"Repo2_15to20 Mito F  251106-Airyscan Processing-06_Repo_Middle_Left","Middle",2,"Green",1.82,41070000
+"Repo2_15to20 Mito F  251106-Airyscan Processing-06_Repo_Middle_Left","Middle",2,"Red",2.18,7582000
+"Repo2_15to20 Mito F  251106-Airyscan Processing-06_Repo_Middle_Right","Middle",2,"Green",1.82,49660000
+"Repo2_15to20 Mito F  251106-Airyscan Processing-06_Repo_Middle_Right","Middle",2,"Red",2.18,13120000
+"Repo2_49to50d F 111125-Airyscan Processing-12_Repo_Old_Left","Old",3,"Green",2.82,37990000
+"Repo2_49to50d F 111125-Airyscan Processing-12_Repo_Old_Left","Old",3,"Red",3.18,4358000
+"Repo2_49to50d F 111125-Airyscan Processing-12_Repo_Old_Right","Old",3,"Green",2.82,32960000
+"Repo2_49to50d F 111125-Airyscan Processing-12_Repo_Old_Right","Old",3,"Red",3.18,3224000
+"Repo3_15to20 Mito F  251106-Airyscan Processing-07_Repo_Middle_Left","Middle",2,"Green",1.82,53070000
+"Repo3_15to20 Mito F  251106-Airyscan Processing-07_Repo_Middle_Left","Middle",2,"Red",2.18,5671000
+"Repo3_15to20 Mito F  251106-Airyscan Processing-07_Repo_Middle_Right","Middle",2,"Green",1.82,37720000
+"Repo3_15to20 Mito F  251106-Airyscan Processing-07_Repo_Middle_Right","Middle",2,"Red",2.18,3946000
+"Repo3_49to50d F 111125-Airyscan Processing-13_Repo_Old_Left","Old",3,"Green",2.82,63420000
+"Repo3_49to50d F 111125-Airyscan Processing-13_Repo_Old_Left","Old",3,"Red",3.18,9650000
+"Repo3_49to50d F 111125-Airyscan Processing-13_Repo_Old_Right","Old",3,"Green",2.82,27940000
+"Repo3_49to50d F 111125-Airyscan Processing-13_Repo_Old_Right","Old",3,"Red",3.18,5623000
+"Repo4_15to20 Mito F  251106-Airyscan Processing-08_Repo_Middle_Left","Middle",2,"Green",1.82,2.8e+07
+"Repo4_15to20 Mito F  251106-Airyscan Processing-08_Repo_Middle_Left","Middle",2,"Red",2.18,3055000
+"Repo4_15to20 Mito F  251106-Airyscan Processing-08_Repo_Middle_Right","Middle",2,"Green",1.82,28720000
+"Repo4_15to20 Mito F  251106-Airyscan Processing-08_Repo_Middle_Right","Middle",2,"Red",2.18,3102000
+"Repo4_49to50d F 111125-Airyscan Processing-14_Repo_Old_Left","Old",3,"Green",2.82,40390000
+"Repo4_49to50d F 111125-Airyscan Processing-14_Repo_Old_Left","Old",3,"Red",3.18,7988000
+"Repo4_49to50d F 111125-Airyscan Processing-14_Repo_Old_Right","Old",3,"Green",2.82,34520000
+"Repo4_49to50d F 111125-Airyscan Processing-14_Repo_Old_Right","Old",3,"Red",3.18,5238000
+"Repo4_Experiment-1402-Split Scenes-10-Airyscan Processing-13_Repo_Young_Left","Young",1,"Green",0.82,51800000
+"Repo4_Experiment-1402-Split Scenes-10-Airyscan Processing-13_Repo_Young_Left","Young",1,"Red",1.18,7761000
+"Repo4_Experiment-1402-Split Scenes-10-Airyscan Processing-13_Repo_Young_Right","Young",1,"Green",0.82,35370000
+"Repo4_Experiment-1402-Split Scenes-10-Airyscan Processing-13_Repo_Young_Right","Young",1,"Red",1.18,6372000
+"Repo5_15to20 Mito F  251106-Airyscan Processing-10_Repo_Middle_Left","Middle",2,"Green",1.82,27680000
+"Repo5_15to20 Mito F  251106-Airyscan Processing-10_Repo_Middle_Left","Middle",2,"Red",2.18,3008000
+"Repo5_15to20 Mito F  251106-Airyscan Processing-10_Repo_Middle_Right","Middle",2,"Green",1.82,42170000
+"Repo5_15to20 Mito F  251106-Airyscan Processing-10_Repo_Middle_Right","Middle",2,"Red",2.18,4533000
+"Repo5_49to50d F 111125-Airyscan Processing-15_Repo_Old_Left","Old",3,"Green",2.82,55490000
+"Repo5_49to50d F 111125-Airyscan Processing-15_Repo_Old_Left","Old",3,"Red",3.18,14420000
+"Repo5_49to50d F 111125-Airyscan Processing-15_Repo_Old_Right","Old",3,"Green",2.82,36460000
+"Repo5_49to50d F 111125-Airyscan Processing-15_Repo_Old_Right","Old",3,"Red",3.18,10720000
+"Repo5_Experiment-1402-Split Scenes-09-Airyscan Processing-12_Repo_Young_Left","Young",1,"Green",0.82,25540000
+"Repo5_Experiment-1402-Split Scenes-09-Airyscan Processing-12_Repo_Young_Left","Young",1,"Red",1.18,7388000
+"Repo5_Experiment-1402-Split Scenes-09-Airyscan Processing-12_Repo_Young_Right","Young",1,"Green",0.82,26220000
+"Repo5_Experiment-1402-Split Scenes-09-Airyscan Processing-12_Repo_Young_Right","Young",1,"Red",1.18,7633000
+"Repo6_07 to 09 Experiment-1400 nRepo F d1to5 10-24-2025-Scene-3-P7-Airyscan Processing-01_Repo_Young_Left","Young",1,"Green",0.82,66620000
+"Repo6_07 to 09 Experiment-1400 nRepo F d1to5 10-24-2025-Scene-3-P7-Airyscan Processing-01_Repo_Young_Left","Young",1,"Red",1.18,16300000
+"Repo6_07 to 09 Experiment-1400 nRepo F d1to5 10-24-2025-Scene-3-P7-Airyscan Processing-01_Repo_Young_Right","Young",1,"Green",0.82,48430000
+"Repo6_07 to 09 Experiment-1400 nRepo F d1to5 10-24-2025-Scene-3-P7-Airyscan Processing-01_Repo_Young_Right","Young",1,"Red",1.18,13920000
+"Repo6_15to20 Mito F  251106-Airyscan Processing-12_Repo_Middle_Left","Middle",2,"Green",1.82,56210000
+"Repo6_15to20 Mito F  251106-Airyscan Processing-12_Repo_Middle_Left","Middle",2,"Red",2.18,3430000
+"Repo6_15to20 Mito F  251106-Airyscan Processing-12_Repo_Middle_Right","Middle",2,"Green",1.82,91980000
+"Repo6_15to20 Mito F  251106-Airyscan Processing-12_Repo_Middle_Right","Middle",2,"Red",2.18,4460000
+"Repo6_49to50d F 111125-Airyscan Processing-16_Repo_Old_Left","Old",3,"Green",2.82,56240000
+"Repo6_49to50d F 111125-Airyscan Processing-16_Repo_Old_Left","Old",3,"Red",3.18,6598000
+"Repo6_49to50d F 111125-Airyscan Processing-16_Repo_Old_Right","Old",3,"Green",2.82,53520000
+"Repo6_49to50d F 111125-Airyscan Processing-16_Repo_Old_Right","Old",3,"Red",3.18,13620000
+"Repo7_15to20 Mito F  251106-Airyscan Processing-09_Repo_Middle_Left","Middle",2,"Green",1.82,24600000
+"Repo7_15to20 Mito F  251106-Airyscan Processing-09_Repo_Middle_Left","Middle",2,"Red",2.18,2321000
+"Repo7_15to20 Mito F  251106-Airyscan Processing-09_Repo_Middle_Right","Middle",2,"Green",1.82,17930000
+"Repo7_15to20 Mito F  251106-Airyscan Processing-09_Repo_Middle_Right","Middle",2,"Red",2.18,1589000
+"Repo7_49to50d F 111125-Airyscan Processing-17_Repo_Old_Left","Old",3,"Green",2.82,61790000
+"Repo7_49to50d F 111125-Airyscan Processing-17_Repo_Old_Left","Old",3,"Red",3.18,7273000
+"Repo7_49to50d F 111125-Airyscan Processing-17_Repo_Old_Right","Old",3,"Green",2.82,29720000
+"Repo7_49to50d F 111125-Airyscan Processing-17_Repo_Old_Right","Old",3,"Red",3.18,3106000
+"Repo7_F d1to5 10-24-2025-Scene-2-P8-Airyscan Processing-02_Repo_Young_Left","Young",1,"Green",0.82,42010000
+"Repo7_F d1to5 10-24-2025-Scene-2-P8-Airyscan Processing-02_Repo_Young_Left","Young",1,"Red",1.18,5957000
+"Repo7_F d1to5 10-24-2025-Scene-2-P8-Airyscan Processing-02_Repo_Young_Right","Young",1,"Green",0.82,56020000
+"Repo7_F d1to5 10-24-2025-Scene-2-P8-Airyscan Processing-02_Repo_Young_Right","Young",1,"Red",1.18,8722000
+"Repo8_15to20 Mito F  251106-Airyscan Processing-13_Repo_Middle_Left","Middle",2,"Green",1.82,75740000
+"Repo8_15to20 Mito F  251106-Airyscan Processing-13_Repo_Middle_Left","Middle",2,"Red",2.18,11520000
+"Repo8_15to20 Mito F  251106-Airyscan Processing-13_Repo_Middle_Right","Middle",2,"Green",1.82,34320000
+"Repo8_15to20 Mito F  251106-Airyscan Processing-13_Repo_Middle_Right","Middle",2,"Red",2.18,5667000
+"Repo8_49to50d F 111125-Airyscan Processing-18_Repo_Old_Left","Old",3,"Green",2.82,80410000
+"Repo8_49to50d F 111125-Airyscan Processing-18_Repo_Old_Left","Old",3,"Red",3.18,5834000
+"Repo8_49to50d F 111125-Airyscan Processing-18_Repo_Old_Right","Old",3,"Green",2.82,87130000
+"Repo8_49to50d F 111125-Airyscan Processing-18_Repo_Old_Right","Old",3,"Red",3.18,6671000
+"Repo8_F d1to5 10-24-2025-Scene-1-P9-Airyscan Processing-03_Repo_Young_Left","Young",1,"Green",0.82,20410000
+"Repo8_F d1to5 10-24-2025-Scene-1-P9-Airyscan Processing-03_Repo_Young_Left","Young",1,"Red",1.18,8978000
+"Repo8_F d1to5 10-24-2025-Scene-1-P9-Airyscan Processing-03_Repo_Young_Right","Young",1,"Green",0.82,24320000
+"Repo8_F d1to5 10-24-2025-Scene-1-P9-Airyscan Processing-03_Repo_Young_Right","Young",1,"Red",1.18,6967000
+"Repo9_15to20 Mito F  251106-Airyscan Processing-11_Repo_Middle_Left","Middle",2,"Green",1.82,20890000
+"Repo9_15to20 Mito F  251106-Airyscan Processing-11_Repo_Middle_Left","Middle",2,"Red",2.18,2619000
+"Repo9_15to20 Mito F  251106-Airyscan Processing-11_Repo_Middle_Right","Middle",2,"Green",1.82,33750000
+"Repo9_15to20 Mito F  251106-Airyscan Processing-11_Repo_Middle_Right","Middle",2,"Red",2.18,3054000
+"Repo9_49to50d F 111125-Airyscan Processing-22_Repo_Old_Left","Old",3,"Green",2.82,33630000
+"Repo9_49to50d F 111125-Airyscan Processing-22_Repo_Old_Left","Old",3,"Red",3.18,3474000
+"Repo9_49to50d F 111125-Airyscan Processing-22_Repo_Old_Right","Old",3,"Green",2.82,32130000
+"Repo9_49to50d F 111125-Airyscan Processing-22_Repo_Old_Right","Old",3,"Red",3.18,2986000
