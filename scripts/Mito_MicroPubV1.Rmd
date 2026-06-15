@@ -1,0 +1,570 @@
+---
+title: "MitoMicroPub_FinalDataAnalysis"
+author: "Abigail Wendland"
+date: "2026-04-25"
+output: html_document
+---
+
+## Overview
+
+- This analysis investigates mitochondrial health using red:green fluorescence ratios across different age groups and treatment conditions.
+- the data used for analysis was obtaned using Image J and z-stacks gotten from the Zesis confocal. 
+
+
+## Analysis Plan
+
+1. Import and clean raw data sets 
+2. Perform Statistical Tests (t-tests and )
+3. Generate plots comapring age and treatment groups 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Install packages 
+
+```{r packages used for analysis}
+ install.packages(c("tidyverse" , "ggpubr" , "janitor" , "readxl" , "knitr" , "rmarkdown","here", "patchwork", "ggbeeswarm"))
+```
+### Load packages 
+
+```{r load packages}
+library(tidyverse)
+library(ggpubr)
+library(rstatix)
+library(janitor)
+library(readxl)
+library(knitr)
+library(here)
+library(patchwork)
+library(ggbeeswarm)
+```
+```{r}
+dir.create("figures", showWarnings = FALSE)
+dir.create("results", showWarnings = FALSE)
+```
+
+## Data Analysis for Ageing nSyb and Repo 
+
+### Upload Data
+``
+```{r uplad data set}
+data<- read_excel("~/Documents/MicroPub/s1_mito_timer_data_blinded.xlsx")
+head(data)
+```
+
+### Clean Names
+```{r clean data set}
+
+data <- data %>% 
+  clean_names() 
+```
+```{r}
+data <- data %>% 
+  mutate(treatment = case_when(
+      grepl("PositiveControl", summary) ~ "paraquat",
+      grepl("NegativeControl", summary) ~ "control",
+      TRUE ~ "baseline"
+    ),
+    
+    age = case_when(
+      grepl("Young", summary) ~ "young",
+      grepl("Middle", summary) ~ "middle",
+      grepl("Old", summary) ~ "old",
+      grepl("10to15", summary) ~ "10to15",
+      grepl("15to18", summary) ~ "15to18"
+    )
+  )
+```
+```{r}
+data <- data %>%
+  mutate(
+    treatment = factor(treatment),
+    age = factor(age)
+  )
+```
+```{r}
+
+table(data$treatment, data$age)
+
+```
+```{r check data set}
+
+data_long <- data %>%
+  pivot_longer(
+    cols = c(left_red_green_ratio, right_red_green_ratio),  
+    names_to = "roi_side",
+    values_to = "value"
+  )
+data_long <- data_long %>%
+  mutate(
+    value = as.numeric(value)
+  )
+```
+
+### Plotting Data
+```{r create datasets for nSyb and Repo red:green across age groups}
+nsyb_data <- plot_data %>%
+  filter(cell_type == "nSybGa4") %>%
+  mutate(age = factor(age_only, levels = c("Young", "Middle", "Old")))
+
+repo_data <- plot_data %>%
+  filter(cell_type == "RepoGa4") %>%
+  mutate(age = factor(age_only, levels = c("Young", "Middle", "Old")))
+
+```
+```{r run stats on nSyb and Repo red:green across age groups}
+run_age_stats <- function(df, group_name) {
+  
+  dir.create("results", showWarnings = FALSE)
+  
+  anova_out <- df %>%
+    anova_test(value ~ age)
+  
+  tukey_out <- df %>%
+    tukey_hsd(value ~ age) %>%
+    add_xy_position(x = "age")
+  
+  anova_save <- as.data.frame(anova_out)
+  anova_save <- anova_save[, !sapply(anova_save, is.list)]
+  
+  tukey_save <- as.data.frame(tukey_out)
+  tukey_save <- tukey_save[, !sapply(tukey_save, is.list)]
+  
+  write.csv(
+    anova_save,
+    file.path("results", paste0(group_name, "_age_anova.csv")),
+    row.names = FALSE
+  )
+  
+  write.csv(
+    tukey_save,
+    file.path("results", paste0(group_name, "_age_tukey.csv")),
+    row.names = FALSE
+  )
+  
+  return(tukey_out)
+}
+
+nsyb_stats <- run_age_stats(nsyb_data, "nsyb")
+repo_stats <- run_age_stats(repo_data, "repo")
+```
+
+
+```{r create plots for nSyb red:green aging data}
+
+stat_pvalue_manual(
+  repo_stats,
+  label = "p.adj.signif",
+  tip.length = 0.01
+)
+
+p_nsyb <- ggplot(nsyb_data, aes(x = age, y = value, color = age)) +
+  geom_boxplot(width = 0.5, outlier.shape = NA, color = "gray50") +
+  geom_jitter(width = 0.05, height = 0, size = 2.5, alpha = 0.65) +
+  stat_pvalue_manual(
+    nsyb_stats,
+    label = "p.adj.signif",
+    tip.length = 0.01
+  ) +
+  scale_color_manual(values = c(
+    "Young" = "blue",
+    "Middle" = "purple",
+    "Old" = "red"
+  )) +
+  coord_cartesian(
+    ylim = c(0, max(nsyb_data$value, na.rm = TRUE) * 1.35)
+  ) +
+  labs(
+    x = NULL,
+    y = "MitoTimer Red:Green Fluorescence Ratio"
+  ) +
+  theme_classic() +
+  theme(
+    legend.position = "none"
+  )
+
+ggsave("NSYB.png",p_nsyb,
+       width = 6, height = 4, dpi = 300)
+p_nsyb
+```
+
+
+```{r create plots for Repo red:green across age groups}
+p_repo <- ggplot(repo_data, aes(x = age, y = value, color = age)) +
+  geom_boxplot(width = 0.5, outlier.shape = NA, color = "gray50") +
+  geom_jitter(width = 0.05, height = 0, size = 2.5, alpha = 0.65) +
+  stat_pvalue_manual(
+    repo_stats,
+    label = "p.adj.signif",
+    tip.length = 0.01,
+    hide.ns = FALSE
+  ) +
+  scale_color_manual(values = c(
+    "Young" = "blue",
+    "Middle" = "purple",
+    "Old" = "red2"
+  )) +
+  coord_cartesian(ylim = c(0, 0.65)) +
+  labs(
+    x = NULL,
+    y = "MitoTimer Red:Green Fluorescence Ratio"
+  ) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+ggsave("REPO.png",p_repo_zoom,
+       width = 6, height = 4, dpi = 300)
+
+p_repo
+
+```
+
+
+```{r merge plots}
+p_repo_zoom <- p_repo +
+  coord_cartesian(ylim = c(0, 0.65))
+
+ggsave("mitotimer_age_panels.png", p_nsyb + p_repo_zoom,
+       width = 10, height = 4, dpi = 300)
+
+p_nsyb + p_repo_zoom
+```
+
+## Data Analysis for Control 10-15 day Paraquat Treated Flies
+
+### Clean Data for Analysis 
+
+```{r cleaning names for control data}
+control_10_15 <- data_long %>%
+  filter(grepl("10to15", summary)) %>%
+  mutate(
+    genotype = case_when(
+      grepl("nSyb", summary) ~ "nSyb",
+      grepl("Repo", summary) ~ "repo"
+    ),
+    treatment_group = case_when(
+      grepl("NegativeControl", summary) ~ "No Treatment",
+      grepl("PositiveControl", summary) ~ "Paraquat"
+    ),
+    genotype = factor(genotype, levels = c("nSyb", "repo")),
+    treatment_group = factor(treatment_group, levels = c("No Treatment", "Paraquat"))
+  )
+```
+
+```{r check tables}
+control_stats <- control_10_15 %>%
+  group_by(genotype) %>%
+  t_test(value ~ treatment_group) %>%
+  add_xy_position(x = "genotype", dodge = 0.8)
+control_stats
+control_stats <- control_stats %>%
+  mutate(
+    p_label = case_when(
+      p <= 0.0001 ~ "****",
+      p <= 0.001  ~ "***",
+      p <= 0.01   ~ "**",
+      p <= 0.05   ~ "*",
+      TRUE        ~ "ns"
+    )
+  )
+```
+
+### Run Stats on Control Data
+```{r run stats on control data}
+control_stats
+
+save_stats <- function(df, filename) {
+
+  df_clean <- df %>%
+    select(where(~ !is.list(.)))
+
+  write.csv(
+    df_clean,
+    filename,
+    row.names = FALSE
+  )
+}
+
+save_stats(
+  control_stats,
+  "results/control_10_15_ttest.csv"
+)
+
+```
+### Plot Control Data
+
+```{r run stats and plot control 10-15 day data}
+p_control_10_15 <- ggplot(
+  control_10_15,
+  aes(x = genotype, y = value)
+) +
+  
+  geom_boxplot(
+    aes(group = interaction(genotype, treatment_group)),
+    position = position_dodge(width = 0.8),
+    width = 0.45,
+    outlier.shape = NA,
+    fill = "white",
+    color = "gray55"
+  ) +
+  
+  geom_point(
+    aes(fill = treatment_group),
+    shape = 21,
+    color = "black",
+    size = 2.7,
+    alpha = 0.85,
+    stroke = 0.8,
+    position = position_jitterdodge(
+      jitter.width = 0.08,
+      dodge.width = 0.8
+    )
+  ) +
+  
+  stat_pvalue_manual(
+    control_stats,
+    label = "p_label",
+    tip.length = 0.01,
+    hide.ns = FALSE
+  ) +
+  
+  scale_fill_manual(values = c(
+    "No Treatment" = "white",
+    "Paraquat" = "black",
+    "control" = "white",
+    "paraquat" = "black"
+  )) +
+  
+  coord_cartesian(
+    ylim = c(0, max(control_10_15$value, na.rm = TRUE) * 1.3)
+  ) +
+  
+  labs(
+    x = "Genotype",
+    y = "MitoTimer Red:Green Fluorescence Ratio",
+    fill = "Treatment"
+  ) +
+  
+  theme_classic() +
+  theme(
+    legend.position = "right"
+  )
+
+p_control_10_15
+
+ggsave(
+  "control_10_15_plot.png",
+  plot = p_control_10_15,
+  width = 6,
+  height = 4,
+  dpi = 300
+)
+
+```
+
+## Data Analysis for Intergrated density nSyb and Repo Young, Middle, Old Flies 
+
+### Create function to plot and run stats on intergrated densisty data 
+
+```{r neuron_intergrated_density_data}
+# Make sure results folder exists
+dir.create("results", showWarnings = FALSE)
+
+# Save the data used inside each integrated density plot
+nsyb_int_data <- p_nsyb_red_green_int$data
+repo_int_data <- p_repo_red_green_int$data
+
+write.csv(
+  nsyb_int_data,
+  "results/nsyb_integrated_density_data.csv",
+  row.names = FALSE
+)
+
+write.csv(
+  repo_int_data,
+  "results/repo_integrated_density_data.csv",
+  row.names = FALSE
+)
+
+# Helper function to remove list columns before saving
+
+save_stats <- function(stats_object, file_name) {
+  
+  dir.create("results", showWarnings = FALSE)
+  
+  stats_clean <- as.data.frame(stats_object)
+  
+  stats_clean <- stats_clean[, !sapply(stats_clean, is.list)]
+  
+  write.csv(
+    stats_clean,
+    file.path("results", file_name),
+    row.names = FALSE
+  )
+}
+
+# Red vs Green within each age group
+nsyb_int_red_vs_green_ttest <- nsyb_int_data %>%
+  group_by(age) %>%
+  t_test(int_density ~ channel, paired = TRUE)
+
+repo_int_red_vs_green_ttest <- repo_int_data %>%
+  group_by(age) %>%
+  t_test(int_density ~ channel, paired = TRUE)
+
+save_stats <- function(stats_object, file_name) {
+  
+  dir.create("results", showWarnings = FALSE)
+  
+  stats_clean <- stats_object %>%
+    as.data.frame() %>%
+    select(where(~ !is.list(.)))
+  
+  write.csv(
+    stats_clean,
+    file.path("results", file_name),
+    row.names = FALSE
+  )
+}
+
+# Green fluorescence intensity across age groups
+nsyb_green_age_anova <- nsyb_int_data %>%
+  filter(channel == "Green") %>%
+  anova_test(int_density ~ age)
+
+repo_green_age_anova <- repo_int_data %>%
+  filter(channel == "Green") %>%
+  anova_test(int_density ~ age)
+
+nsyb_green_age_tukey <- nsyb_int_data %>%
+  filter(channel == "Green") %>%
+  tukey_hsd(int_density ~ age)
+
+repo_green_age_tukey <- repo_int_data %>%
+  filter(channel == "Green") %>%
+  tukey_hsd(int_density ~ age)
+
+save_stats <- function(stats_object, file_name) {
+  
+  dir.create("results", showWarnings = FALSE)
+  
+  stats_clean <- as.data.frame(stats_object)
+  
+  stats_clean <- stats_clean[, !sapply(stats_clean, is.list)]
+  
+  write.csv(
+    stats_clean,
+    file.path("results", file_name),
+    row.names = FALSE
+  )
+}
+
+# Red fluorescence intensity across age groups
+nsyb_red_age_anova <- nsyb_int_data %>%
+  filter(channel == "Red") %>%
+  anova_test(int_density ~ age)
+
+repo_red_age_anova <- repo_int_data %>%
+  filter(channel == "Red") %>%
+  anova_test(int_density ~ age)
+
+nsyb_red_age_tukey <- nsyb_int_data %>%
+  filter(channel == "Red") %>%
+  tukey_hsd(int_density ~ age)
+
+repo_red_age_tukey <- repo_int_data %>%
+  filter(channel == "Red") %>%
+  tukey_hsd(int_density ~ age)
+
+save_stats <- function(stats_object, file_name) {
+  
+  dir.create("results", showWarnings = FALSE)
+  
+  stats_clean <- as.data.frame(stats_object)
+  
+  stats_clean <- stats_clean[, !sapply(stats_clean, is.list)]
+  
+  write.csv(
+    stats_clean,
+    file.path("results", file_name),
+    row.names = FALSE
+  )
+}
+
+# Print outputs so you can see them in the knitted file
+save_stats(nsyb_int_red_vs_green_ttest,
+           "nsyb_int_density_red_vs_green_ttest.csv")
+
+save_stats(repo_int_red_vs_green_ttest,
+           "repo_int_density_red_vs_green_ttest.csv")
+
+save_stats(nsyb_green_age_anova,
+           "nsyb_int_density_green_across_age_anova.csv")
+
+save_stats(repo_green_age_anova,
+           "repo_int_density_green_across_age_anova.csv")
+
+save_stats(nsyb_green_age_tukey,
+           "nsyb_int_density_green_across_age_tukey.csv")
+
+save_stats(repo_green_age_tukey,
+           "repo_int_density_green_across_age_tukey.csv")
+
+save_stats(nsyb_red_age_anova,
+           "nsyb_int_density_red_across_age_anova.csv")
+
+save_stats(repo_red_age_anova,
+           "repo_int_density_red_across_age_anova.csv")
+
+save_stats(nsyb_red_age_tukey,
+           "nsyb_int_density_red_across_age_tukey.csv")
+
+save_stats(repo_red_age_tukey,
+           "repo_int_density_red_across_age_tukey.csv")
+```
+
+
+```{r chart plots}
+
+p_nsyb_red_green_int <- make_connected_int_plot(
+  data_long,
+  "nSyb_Young|nSyb_Middle|nSyb_Old",
+  NULL
+)
+
+p_repo_red_green_int <- make_connected_int_plot(
+  data_long,
+  "Repo_Young|Repo_Middle|Repo_Old",
+  NULL
+)
+
+p_nsyb_red_green_int
+p_repo_red_green_int
+
+
+```
+
+### Save Integrated Density Plots
+
+```{r}
+
+
+ggsave(
+  "nsyb_absolute_integrated_density.png",
+  plot = p_nsyb_red_green_int,
+  width = 7,
+  height = 5.5,
+  dpi = 600
+)
+
+ggsave(
+  "repo_absolute_integrated_density.png",
+  plot = p_repo_red_green_int,
+  width = 7,
+  height = 5.5,
+  dpi = 600
+)
+
+
+```
