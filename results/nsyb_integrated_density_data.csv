@@ -1,0 +1,105 @@
+"sample_id","age","age_num","channel","x_pos","int_density"
+"nSyb10_15to20 Mito F  251031-Airyscan Processing-14_nSyb_Middle_Left","Middle",2,"Green",1.82,52210000
+"nSyb10_15to20 Mito F  251031-Airyscan Processing-14_nSyb_Middle_Left","Middle",2,"Red",2.18,92050000
+"nSyb10_15to20 Mito F  251031-Airyscan Processing-14_nSyb_Middle_Right","Middle",2,"Green",1.82,32580000
+"nSyb10_15to20 Mito F  251031-Airyscan Processing-14_nSyb_Middle_Right","Middle",2,"Red",2.18,56760000
+"nSyb1_15to20 Mito F 251031 Processed_nSyb_Middle_Left","Middle",2,"Green",1.82,13750000
+"nSyb1_15to20 Mito F 251031 Processed_nSyb_Middle_Left","Middle",2,"Red",2.18,13760000
+"nSyb1_15to20 Mito F 251031 Processed_nSyb_Middle_Right","Middle",2,"Green",1.82,37340000
+"nSyb1_15to20 Mito F 251031 Processed_nSyb_Middle_Right","Middle",2,"Red",2.18,81690000
+"nSyb1_49to50d F 111125-Airyscan Processing-01_nSyb_Old_Left","Old",3,"Green",2.82,24160000
+"nSyb1_49to50d F 111125-Airyscan Processing-01_nSyb_Old_Left","Old",3,"Red",3.18,4664000
+"nSyb1_49to50d F 111125-Airyscan Processing-01_nSyb_Old_Right","Old",3,"Green",2.82,10530000
+"nSyb1_49to50d F 111125-Airyscan Processing-01_nSyb_Old_Right","Old",3,"Red",3.18,1868000
+"nSyb1_Experiment-1405-Split Scenes-08-Airyscan Processing-11_nSyb_Young_Left","Young",1,"Green",0.82,8507369.159
+"nSyb1_Experiment-1405-Split Scenes-08-Airyscan Processing-11_nSyb_Young_Left","Young",1,"Red",1.18,3344241.274
+"nSyb1_Experiment-1405-Split Scenes-08-Airyscan Processing-11_nSyb_Young_Right","Young",1,"Green",0.82,18550498.313
+"nSyb1_Experiment-1405-Split Scenes-08-Airyscan Processing-11_nSyb_Young_Right","Young",1,"Red",1.18,12819512.703
+"nSyb2_15to20 Mito F  251031-Airyscan Processing-02_nSyb_Middle_Left","Middle",2,"Green",1.82,24130000
+"nSyb2_15to20 Mito F  251031-Airyscan Processing-02_nSyb_Middle_Left","Middle",2,"Red",2.18,41830000
+"nSyb2_15to20 Mito F  251031-Airyscan Processing-02_nSyb_Middle_Right","Middle",2,"Green",1.82,13670000
+"nSyb2_15to20 Mito F  251031-Airyscan Processing-02_nSyb_Middle_Right","Middle",2,"Red",2.18,24310000
+"nSyb2_49to50d F 111125-Airyscan Processing-02_nSyb_Old_Left","Old",3,"Green",2.82,30860000
+"nSyb2_49to50d F 111125-Airyscan Processing-02_nSyb_Old_Left","Old",3,"Red",3.18,9397000
+"nSyb2_49to50d F 111125-Airyscan Processing-02_nSyb_Old_Right","Old",3,"Green",2.82,19070000
+"nSyb2_49to50d F 111125-Airyscan Processing-02_nSyb_Old_Right","Old",3,"Red",3.18,5613000
+"nSyb2_Experiment-1405-Split Scenes-07-Airyscan Processing-05_nSyb_Young_Left","Young",1,"Green",0.82,21591967.398
+"nSyb2_Experiment-1405-Split Scenes-07-Airyscan Processing-05_nSyb_Young_Left","Young",1,"Red",1.18,15580247.77
+"nSyb2_Experiment-1405-Split Scenes-07-Airyscan Processing-05_nSyb_Young_Right","Young",1,"Green",0.82,28798234.726
+"nSyb2_Experiment-1405-Split Scenes-07-Airyscan Processing-05_nSyb_Young_Right","Young",1,"Red",1.18,23562758.631
+"nSyb3_15to20 Mito F  251031-Airyscan Processing-04_nSyb_Middle_Left","Middle",2,"Green",1.82,26820000
+"nSyb3_15to20 Mito F  251031-Airyscan Processing-04_nSyb_Middle_Left","Middle",2,"Red",2.18,50920000
+"nSyb3_15to20 Mito F  251031-Airyscan Processing-04_nSyb_Middle_Right","Middle",2,"Green",1.82,20850000
+"nSyb3_15to20 Mito F  251031-Airyscan Processing-04_nSyb_Middle_Right","Middle",2,"Red",2.18,31230000
+"nSyb3_49to50d F 111125-Airyscan Processing-03_nSyb_Old_Left","Old",3,"Green",2.82,26790000
+"nSyb3_49to50d F 111125-Airyscan Processing-03_nSyb_Old_Left","Old",3,"Red",3.18,10960000
+"nSyb3_49to50d F 111125-Airyscan Processing-03_nSyb_Old_Right","Old",3,"Green",2.82,28750000
+"nSyb3_49to50d F 111125-Airyscan Processing-03_nSyb_Old_Right","Old",3,"Red",3.18,14990000
+"nSyb3_Experiment-1405-Split Scenes-06-Airyscan Processing-04_nSyb_Young_Left","Young",1,"Green",0.82,13340000
+"nSyb3_Experiment-1405-Split Scenes-06-Airyscan Processing-04_nSyb_Young_Left","Young",1,"Red",1.18,2982000
+"nSyb3_Experiment-1405-Split Scenes-06-Airyscan Processing-04_nSyb_Young_Right","Young",1,"Green",0.82,14130000
+"nSyb3_Experiment-1405-Split Scenes-06-Airyscan Processing-04_nSyb_Young_Right","Young",1,"Red",1.18,3338000
+"nSyb4_15to20 Mito F  251031-Airyscan Processing-11_nSyb_Middle_Left","Middle",2,"Green",1.82,29760000
+"nSyb4_15to20 Mito F  251031-Airyscan Processing-11_nSyb_Middle_Left","Middle",2,"Red",2.18,45350000
+"nSyb4_15to20 Mito F  251031-Airyscan Processing-11_nSyb_Middle_Right","Middle",2,"Green",1.82,21850000
+"nSyb4_15to20 Mito F  251031-Airyscan Processing-11_nSyb_Middle_Right","Middle",2,"Red",2.18,49690000
+"nSyb4_49to50d F 111125-Airyscan Processing-03-Airyscan Processing-04_nSyb_Old_Left","Old",3,"Green",2.82,47870000
+"nSyb4_49to50d F 111125-Airyscan Processing-03-Airyscan Processing-04_nSyb_Old_Left","Old",3,"Red",3.18,31480000
+"nSyb4_49to50d F 111125-Airyscan Processing-03-Airyscan Processing-04_nSyb_Old_Right","Old",3,"Green",2.82,26810000
+"nSyb4_49to50d F 111125-Airyscan Processing-03-Airyscan Processing-04_nSyb_Old_Right","Old",3,"Red",3.18,16990000
+"nSyb4_Experiment-1405-Split Scenes-05-Airyscan Processing-14_nSyb_Young_Left","Young",1,"Green",0.82,9276000
+"nSyb4_Experiment-1405-Split Scenes-05-Airyscan Processing-14_nSyb_Young_Left","Young",1,"Red",1.18,3687000
+"nSyb4_Experiment-1405-Split Scenes-05-Airyscan Processing-14_nSyb_Young_Right","Young",1,"Green",0.82,7549000
+"nSyb4_Experiment-1405-Split Scenes-05-Airyscan Processing-14_nSyb_Young_Right","Young",1,"Red",1.18,3126000
+"nSyb5_15to20 Mito F  251031-Airyscan Processing-10_nSyb_Middle_Left","Middle",2,"Green",1.82,25100000
+"nSyb5_15to20 Mito F  251031-Airyscan Processing-10_nSyb_Middle_Left","Middle",2,"Red",2.18,30750000
+"nSyb5_15to20 Mito F  251031-Airyscan Processing-10_nSyb_Middle_Right","Middle",2,"Green",1.82,21600000
+"nSyb5_15to20 Mito F  251031-Airyscan Processing-10_nSyb_Middle_Right","Middle",2,"Red",2.18,22480000
+"nSyb5_49to50d F 111125-Airyscan Processing-05_nSyb_Old_Left","Old",3,"Green",2.82,38780000
+"nSyb5_49to50d F 111125-Airyscan Processing-05_nSyb_Old_Left","Old",3,"Red",3.18,17300000
+"nSyb5_49to50d F 111125-Airyscan Processing-05_nSyb_Old_Right","Old",3,"Green",2.82,39700000
+"nSyb5_49to50d F 111125-Airyscan Processing-05_nSyb_Old_Right","Old",3,"Red",3.18,37950000
+"nSyb5_Experiment-1405-Split Scenes-04-Airyscan Processing-03_nSyb_Young_Left","Young",1,"Green",0.82,19900000
+"nSyb5_Experiment-1405-Split Scenes-04-Airyscan Processing-03_nSyb_Young_Left","Young",1,"Red",1.18,15300000
+"nSyb5_Experiment-1405-Split Scenes-04-Airyscan Processing-03_nSyb_Young_Right","Young",1,"Green",0.82,19230000
+"nSyb5_Experiment-1405-Split Scenes-04-Airyscan Processing-03_nSyb_Young_Right","Young",1,"Red",1.18,15630000
+"nSyb6_15to20 Mito F  251031-Airyscan Processing-09_nSyb_Middle_Left","Middle",2,"Green",1.82,24650000
+"nSyb6_15to20 Mito F  251031-Airyscan Processing-09_nSyb_Middle_Left","Middle",2,"Red",2.18,56610000
+"nSyb6_15to20 Mito F  251031-Airyscan Processing-09_nSyb_Middle_Right","Middle",2,"Green",1.82,33940000
+"nSyb6_15to20 Mito F  251031-Airyscan Processing-09_nSyb_Middle_Right","Middle",2,"Red",2.18,99770000
+"nSyb6_49to50d F 111125-Airyscan Processing-06_nSyb_Old_Left","Old",3,"Green",2.82,18770000
+"nSyb6_49to50d F 111125-Airyscan Processing-06_nSyb_Old_Left","Old",3,"Red",3.18,18660000
+"nSyb6_49to50d F 111125-Airyscan Processing-06_nSyb_Old_Right","Old",3,"Green",2.82,19220000
+"nSyb6_49to50d F 111125-Airyscan Processing-06_nSyb_Old_Right","Old",3,"Red",3.18,18710000
+"nSyb6_Experiment-1405-Split Scenes-03-Airyscan Processing-02_nSyb_Young_Left","Young",1,"Green",0.82,9786000
+"nSyb6_Experiment-1405-Split Scenes-03-Airyscan Processing-02_nSyb_Young_Left","Young",1,"Red",1.18,4096000
+"nSyb6_Experiment-1405-Split Scenes-03-Airyscan Processing-02_nSyb_Young_Right","Young",1,"Green",0.82,12440000
+"nSyb6_Experiment-1405-Split Scenes-03-Airyscan Processing-02_nSyb_Young_Right","Young",1,"Red",1.18,5469000
+"nSyb7_15to20 Mito F  251031-Airyscan Processing-05_nSyb_Middle_Left","Middle",2,"Green",1.82,13390000
+"nSyb7_15to20 Mito F  251031-Airyscan Processing-05_nSyb_Middle_Left","Middle",2,"Red",2.18,20580000
+"nSyb7_15to20 Mito F  251031-Airyscan Processing-05_nSyb_Middle_Right","Middle",2,"Green",1.82,14620000
+"nSyb7_15to20 Mito F  251031-Airyscan Processing-05_nSyb_Middle_Right","Middle",2,"Red",2.18,19300000
+"nSyb7_49to50d F 111125-Airyscan Processing-07_nSyb_Old_Left","Old",3,"Green",2.82,98570000
+"nSyb7_49to50d F 111125-Airyscan Processing-07_nSyb_Old_Left","Old",3,"Red",3.18,46260000
+"nSyb7_49to50d F 111125-Airyscan Processing-07_nSyb_Old_Right","Old",3,"Green",2.82,50950000
+"nSyb7_49to50d F 111125-Airyscan Processing-07_nSyb_Old_Right","Old",3,"Red",3.18,31070000
+"nSyb7_Experiment-1405-Split Scenes-02-Airyscan Processing-01_nSyb_Young_Left","Young",1,"Green",0.82,25330000
+"nSyb7_Experiment-1405-Split Scenes-02-Airyscan Processing-01_nSyb_Young_Left","Young",1,"Red",1.18,17040000
+"nSyb7_Experiment-1405-Split Scenes-02-Airyscan Processing-01_nSyb_Young_Right","Young",1,"Green",0.82,23360000
+"nSyb7_Experiment-1405-Split Scenes-02-Airyscan Processing-01_nSyb_Young_Right","Young",1,"Red",1.18,8121000
+"nSyb8_15to20 Mito F  251031-Airyscan Processing-07_nSyb_Middle_Left","Middle",2,"Green",1.82,28400000
+"nSyb8_15to20 Mito F  251031-Airyscan Processing-07_nSyb_Middle_Left","Middle",2,"Red",2.18,76460000
+"nSyb8_15to20 Mito F  251031-Airyscan Processing-07_nSyb_Middle_Right","Middle",2,"Green",1.82,26230000
+"nSyb8_15to20 Mito F  251031-Airyscan Processing-07_nSyb_Middle_Right","Middle",2,"Red",2.18,66910000
+"nSyb8_49to50d F 111125-Airyscan Processing-08_nSyb_Old_Left","Old",3,"Green",2.82,35390000
+"nSyb8_49to50d F 111125-Airyscan Processing-08_nSyb_Old_Left","Old",3,"Red",3.18,26630000
+"nSyb8_49to50d F 111125-Airyscan Processing-08_nSyb_Old_Right","Old",3,"Green",2.82,45970000
+"nSyb8_49to50d F 111125-Airyscan Processing-08_nSyb_Old_Right","Old",3,"Red",3.18,40230000
+"nSyb9_15to20 Mito F  251031-Airyscan Processing-08_nSyb_Middle_Left","Middle",2,"Green",1.82,10710000
+"nSyb9_15to20 Mito F  251031-Airyscan Processing-08_nSyb_Middle_Left","Middle",2,"Red",2.18,9911000
+"nSyb9_15to20 Mito F  251031-Airyscan Processing-08_nSyb_Middle_Right","Middle",2,"Green",1.82,13370000
+"nSyb9_15to20 Mito F  251031-Airyscan Processing-08_nSyb_Middle_Right","Middle",2,"Red",2.18,15670000
+"nSyb9_49to50d F 111125-Airyscan Processing-10_nSyb_Old_Left","Old",3,"Green",2.82,24380000
+"nSyb9_49to50d F 111125-Airyscan Processing-10_nSyb_Old_Left","Old",3,"Red",3.18,13570000
+"nSyb9_49to50d F 111125-Airyscan Processing-10_nSyb_Old_Right","Old",3,"Green",2.82,10080000
+"nSyb9_49to50d F 111125-Airyscan Processing-10_nSyb_Old_Right","Old",3,"Red",3.18,2500000
