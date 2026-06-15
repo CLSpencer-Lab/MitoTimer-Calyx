@@ -4,7 +4,7 @@
 
 This repository contains the data analysis workflow, statistical testing, and figure generation for a Drosophila MitoTimer aging study.
 
-MitoTimer is a fluorescent reporter that shifts from green to red as mitochondria age. This project examines mitochondrial health across age groups and treatment conditions in neuronal and glial populations using the Gal4/UAS system.
+MitoTimer is a fluorescent reporter that shifts from green to red as mitochondria redox state fluctuates. This project examines mitochondrial health across age groups and treatment conditions in neuronal and glial populations using the Gal4/UAS system.
 
 Genotypes analyzed:
 
